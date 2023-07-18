@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Ysabeau+Office&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Ysabeau Office', sans-serif;
+}
+
+html {
+    font-size: 10px;
+}
+
+body {
+    font-size: 1.6rem;
+}
+
+/* ----------WEATHER---------- */
+.weather-page {
+    background-color: #f2f2ea;
+    padding: 10vw;
+}
+
+/* ---------------------------------------天気予報-------------------------------------------*/
+.weatherForecast {
+    display: flex;
+    text-align: center;
+    border: 0.2rem solid #d9d0bf;
+    border-radius: 1.5rem;
+    margin-bottom: 5rem;
+  }
+  
+  .weatherInfo {
+    width: calc(100% / 7);
+    margin: 1rem;
+    box-sizing: border-box;
+    border: 0.1rem solid #d9d0bf;
+    border-radius: 1.5rem;
+  }
+  
+  .weatherInfo div {
+    font-size: 1.6rem;
+  }
+  
+  .weatherImg {
+    width: 70%;
+    margin: 2rem;
+  }
+
+  .weatherTemp {
+    margin: 1rem;
+  }
+  
+  .tempMin {
+    color: blue;
+  }
+  
+  .tempMax {
+    color: red;
+  }  
+
+/*---------------------------------------天気予報ここまで--------------------------------------*/
+
+
+.wp {
+    background-color: #efede1;
+    padding: 3vw;
+    border-radius: 1.5rem;
+    margin-bottom: 5rem;
+}
+
+.wp-kind {
+    text-align: center;
+    font-size: 4rem;
+    margin-bottom: 1rem;
+}
+
+.wp-grid {
+    display: grid;
+    gap: 3rem;
+}
+
+.wp-items {
+    background-color: #fff;
+    padding: 2vw;
+    border-radius: 1.5rem;
+    overflow: hidden; /*はみ出た分どうするか後で考える！！*/
+}
+
+.wp-img {
+    width: 80%;
+    height: 50%;
+    border-radius: 1.5rem;
+}
+
+.wp-name {
+    font-size: 3rem;
+    font-weight: bold;
+    writing-mode: vertical-rl; /* 縦書きにする */
+    display: inline; /* 画像の横に文字を並べるため */
+}
+
+#sunny-1 {
+    grid-area: item1
+}
+
+#sunny-2 {
+    grid-area: item2
+}
+
+#sunny-3 {
+    grid-area: item3
+}
+
+
+/* --Desktop-- */
+@media screen and (min-width: 1024px) {
+    .wp-grid {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas:
+            'item1 item1 item2'
+            'item1 item1 item3';
+    }
+}
+
+
+/* ----------FOOTER---------- */
+footer {
+    display: flex;
+    justify-content: space-between;
+    background-color: #f2f2ea;
+    border-top: 1rem dotted #d9d0bf;
+}
+
+/* left */
+.footer-logo {
+    width: 10vw;
+}
+
+.footer-tel {
+    font-size: 2.5rem;
+    margin: 1rem;
+}
+
+.footer-email {
+    font-size: 2rem;
+    margin: 1rem;
+}
+
+/* center */
+.footer-list {
+    display: flex; /*中央に配置するために使用*/
+    flex-direction: column;
+    align-items: center; /*左右中央揃え*/
+    justify-content: center; /*上下中央揃え*/
+}
+
+.footer-list li {
+    font-size: 2rem;
+    list-style: none;
+    margin: 2rem;
+}
+
+.footer-list li a {
+    text-decoration: none;
+}
+
+.footer-buttons {
+    width: 20%;
+}
+
+/* right */
+.footer-b-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footer-b-img {
+    width: 3vw;
+    margin: 2vw;
+}

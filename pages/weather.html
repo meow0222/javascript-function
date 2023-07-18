@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/chinatsu.css"> <!--type="text/css" media="screen,print"-->
+    <title>WEATHER</title>
+</head>
+
+<body>
+    <!-- HEADER -->
+
+    <!-- WEATHER -->
+    <main class="weather-page">
+        <p class="weather-title">
+            Enjoying Tokyo - Rain or Shine!
+        </p>
+        <!-------------------------------天気予報------------------------------>
+        <div id="location"><a href="https://www.jma.go.jp/bosai/forecast/" target="_blank">
+                from Japan Meteorological Agency</a></div>
+        <div class="weatherForecast">
+            <div class="weatherInfo">
+                <div class="date">--/--(-)</div>
+                <img class="weatherImg">
+                <div class="weatherTelop">--</div>
+                <div class="weatherTemp"><span class="tempMin">-℃</span>/<span class="tempMax">-℃</span></div>
+            </div>
+        </div>
+        <script>
+            for (let i = 0; i < 6; i++) {
+                const el = document.querySelector('.weatherInfo').cloneNode(true);
+                document.querySelector('.weatherForecast').appendChild(el);
+            }
+        </script>
+        <script src="../js/chinatsu.js"></script>
+
+        <!-------------------------------天気予報ここまで------------------------------>
+
+
+
+        <section class="wp sunny"> <!--wp means 'weather&place'-->
+            <h2 class="wp-kind">SUNNY</h2>
+            <!--grid-->
+            <div class="wp-grid">
+                <div class="wp-items" id="sunny-1">
+                    <img class="wp-img" src="../imgs/w-asakusa.jpg" alt=""><!--float-->
+                    <h3 class="wp-name">ASAKUSA</h3>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                        Suscipit eveniet magnam libero cum quo sed ex repudiandae,
+                        iusto vel tempore nesciunt numquam itaque id animi cupiditate
+                        alias adipisci mollitia? Unde?</p>
+                </div>
+
+                <div class="wp-items" id="sunny-2">
+                    <img class="wp-img" src="../imgs/w-asakusa.jpg" alt="">
+                    <h3 class="wp-name">ASAKUSA</h3>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                        Suscipit eveniet magnam libero cum quo sed ex repudiandae,
+                        iusto vel tempore nesciunt numquam itaque id animi cupiditate
+                        alias adipisci mollitia? Unde?</p>
+                </div>
+
+                <div class="wp-items" id="sunny-3">
+                    <img class="wp-img" src="../imgs/w-uenozoo.jpg" alt="">
+                    <h3 class="wp-name">UZENO ZOO</h3>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                        Suscipit eveniet magnam libero cum quo sed ex repudiandae,
+                        iusto vel tempore nesciunt numquam itaque id animi cupiditate
+                        alias adipisci mollitia? Unde?</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="wp cloudy">
+            <h2 class="wp-kind">CLOUDY</h2>
+            <!--grid-->
+            <div class="wp-grid">
+                <div class="wp-items" id="cloudy-1">
+                    <img class="wp-img" src="../imgs/w-asakusa.jpg" alt=""><!--float-->
+                    <h3 class="wp-name">ASAKUSA</h3>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                        Suscipit eveniet magnam libero cum quo sed ex repudiandae,
+                        iusto vel tempore nesciunt numquam itaque id animi cupiditate
+                        alias adipisci mollitia? Unde?</p>
+                </div>
+
+                <div class="wp-items" id="cloudy-2">
+                    <img class="wp-img" src="../imgs/w-asakusa.jpg" alt="">
+                    <h3 class="wp-name">ASAKUSA</h3>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                        Suscipit eveniet magnam libero cum quo sed ex repudiandae,
+                        iusto vel tempore nesciunt numquam itaque id animi cupiditate
+                        alias adipisci mollitia? Unde?</p>
+                </div>
+
+                <div class="wp-items" id="cloudy-3">
+                    <img class="wp-img" src="../imgs/w-uenozoo.jpg" alt="">
+                    <h3 class="wp-name">ASAKUSA</h3>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                        Suscipit eveniet magnam libero cum quo sed ex repudiandae,
+                        iusto vel tempore nesciunt numquam itaque id animi cupiditate
+                        alias adipisci mollitia? Unde?</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="wp rainy">
+            <h2 class="wp-kind">RAINY</h2>
+            <!--grid-->
+            <div class="wp-grid">
+                <div class="wp-items" id="rainy-1">
+                    <img class="wp-img" src="../imgs/w-asakusa.jpg" alt=""><!--float-->
+                    <h3 class="wp-name">ASAKUSA</h3>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                        Suscipit eveniet magnam libero cum quo sed ex repudiandae,
+                        iusto vel tempore nesciunt numquam itaque id animi cupiditate
+                        alias adipisci mollitia? Unde?</p>
+                </div>
+
+                <div class="wp-items" id="rainy-2">
+                    <img class="wp-img" src="../imgs/w-asakusa.jpg" alt="">
+                    <h3 class="wp-name">ASAKUSA</h3>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                        Suscipit eveniet magnam libero cum quo sed ex repudiandae,
+                        iusto vel tempore nesciunt numquam itaque id animi cupiditate
+                        alias adipisci mollitia? Unde?</p>
+                </div>
+
+                <div class="wp-items" id="rainy-3">
+                    <img class="wp-img" src="../imgs/w-uenozoo.jpg" alt="">
+                    <h3 class="wp-name">ASAKUSA</h3>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                        Suscipit eveniet magnam libero cum quo sed ex repudiandae,
+                        iusto vel tempore nesciunt numquam itaque id animi cupiditate
+                        alias adipisci mollitia? Unde?</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOTTER -->
+    <footer>
+        <div class="footer-info">
+            <img class="footer-logo" src="../imgs/logo.png" alt="">
+            <p class="footer-tel">600-000-0000</p>
+            <p class="footer-email">infoinfoinfo@qmail.com</p>
+        </div>
+        <ul class="footer-list">
+            <li><a href="">Home</a></li>
+            <li><a href="">Weather & Place</a></li>
+            <li><a href="">Another page???</a></li>
+        </ul>
+        <div class="footer-buttons">
+            <div class="footer-b-container">
+                <a class="footer-button" href="https://twitter.com">
+                    <img class="footer-b-img" src="../imgs/logo-twitter.svg" alt="">
+                </a>
+                <a class="footer-button" href="https://instagram.com">
+                    <img class="footer-b-img" src="../imgs/logo-insta.svg" alt="">
+                </a>
+                <a class="footer-button" href="https://facebook.com">
+                    <img class="footer-b-img" src="../imgs/logo-facebook.svg" alt="">
+                </a>
+                <a class="footer-button" href="https://www.tiktok.com">
+                    <img class="footer-b-img" src="../imgs/logo-tiktok.svg" alt="">
+                </a>
+            </div>
+            <p>©copywritecopywitecopywrite</p>
+        </div>
+    </footer>
+</body>
+
+</html>
