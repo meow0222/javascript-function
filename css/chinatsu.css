@@ -21,47 +21,54 @@ body {
     padding: 10vw;
 }
 
-/* ---------------------------------------天気予報-------------------------------------------*/
+.weather-title {
+    font-size: 5vw;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 5rem;
+}
+
+/* ------------------------weather JS from here------------------------ */
 .weatherForecast {
     display: flex;
     text-align: center;
     border: 0.2rem solid #d9d0bf;
     border-radius: 1.5rem;
     margin-bottom: 5rem;
-  }
-  
-  .weatherInfo {
+}
+
+.weatherInfo {
     width: calc(100% / 7);
     margin: 1rem;
     box-sizing: border-box;
     border: 0.1rem solid #d9d0bf;
     border-radius: 1.5rem;
-  }
-  
-  .weatherInfo div {
+}
+
+.weatherInfo div {
     font-size: 1.6rem;
-  }
-  
-  .weatherImg {
+}
+
+.weatherImg {
     width: 70%;
     margin: 2rem;
-  }
+}
 
-  .weatherTemp {
+.weatherTemp {
     margin: 1rem;
-  }
-  
-  .tempMin {
+}
+
+.tempMin {
     color: blue;
-  }
-  
-  .tempMax {
+}
+
+.tempMax {
     color: red;
-  }  
+}
+/* ------------------------weather JS until here------------------------ */
 
-/*---------------------------------------天気予報ここまで--------------------------------------*/
 
-
+/* -----WEATHER PLACE----- */
 .wp {
     background-color: #efede1;
     padding: 3vw;
@@ -75,66 +82,148 @@ body {
     margin-bottom: 1rem;
 }
 
-.wp-grid {
+.w-icon {
+    width: 3vw;
+    min-width: 2.5rem;
+    margin-left: 1rem;
+}
+
+.wp-grid-l,
+.wp-grid-r {
     display: grid;
     gap: 3rem;
 }
 
 .wp-items {
+    display: flex;
     background-color: #fff;
     padding: 2vw;
     border-radius: 1.5rem;
-    overflow: hidden; /*はみ出た分どうするか後で考える！！*/
 }
 
 .wp-img {
-    width: 80%;
-    height: 50%;
+    width: 100%;
+    height: 50vw;
     border-radius: 1.5rem;
 }
 
 .wp-name {
     font-size: 3rem;
     font-weight: bold;
-    writing-mode: vertical-rl; /* 縦書きにする */
-    display: inline; /* 画像の横に文字を並べるため */
+    writing-mode: vertical-rl;
+    /* 縦書きにする */
 }
 
-#sunny-1 {
-    grid-area: item1
+#sunny-1,
+#rainy-1 {
+    grid-area: l1
 }
 
-#sunny-2 {
-    grid-area: item2
+#sunny-2,
+#rainy-2 {
+    grid-area: l2
 }
 
-#sunny-3 {
-    grid-area: item3
+#sunny-3,
+#rainy-3 {
+    grid-area: l3
 }
 
+#cloudy-1 {
+    grid-area: r1;
+}
+
+#cloudy-2 {
+    grid-area: r2;
+}
+
+#cloudy-3 {
+    grid-area: r3;
+}
+
+/* --Mobile-- */
+.wp-grid-l {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        'l1'
+        'l2'
+        'l3'
+}
+
+.wp-grid-r {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        'r1'
+        'r2'
+        'r3';
+}
+
+/* --Tablet-- */
+@media screen and (min-width: 768px) {
+    .wp-img {
+        height: 50vw;
+    }
+}
 
 /* --Desktop-- */
 @media screen and (min-width: 1024px) {
-    .wp-grid {
+    .wp-grid-l {
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-areas:
-            'item1 item1 item2'
-            'item1 item1 item3';
+            'l1 l1 l2'
+            'l1 l1 l3'
+    }
+
+    .wp-grid-r {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas:
+            'r2 r1 r1'
+            'r3 r1 r1';
+    }
+
+    .wp-img {
+        width: 100%;
+        height: 50%;
+        border-radius: 1.5rem;
+    }
+
+    .big+.wp-name{
+        font-size: 6rem;
+    }
+
+    .big p{
+        font-size: 2.5rem;
     }
 }
 
 
 /* ----------FOOTER---------- */
 footer {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
     background-color: #f2f2ea;
     border-top: 1rem dotted #d9d0bf;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+        'item1 item1'
+        'item2 item3';
 }
 
-/* left */
+#footer-li {
+    grid-area: item1;
+}
+
+#footer-in {
+    grid-area: item2;
+}
+
+#footer-bu {
+    grid-area: item3;
+}
+
+
+/* -----logo----- */
 .footer-logo {
-    width: 10vw;
+    width: 20vw;
 }
 
 .footer-tel {
@@ -147,35 +236,66 @@ footer {
     margin: 1rem;
 }
 
-/* center */
+/* -----list----- */
 .footer-list {
-    display: flex; /*中央に配置するために使用*/
-    flex-direction: column;
-    align-items: center; /*左右中央揃え*/
-    justify-content: center; /*上下中央揃え*/
+    display: flex;
+    justify-content: center;
+    /*上下中央揃え*/
 }
 
 .footer-list li {
-    font-size: 2rem;
+    font-size: 3rem;
+    font-weight: bold;
     list-style: none;
-    margin: 2rem;
+    margin: 1.5rem;
 }
 
 .footer-list li a {
     text-decoration: none;
+    color: black;
 }
 
-.footer-buttons {
-    width: 20%;
+.footer-list li a:hover {
+    background-color: #d9d0bf;
+    border-radius: 2rem;
 }
 
-/* right */
+/* -----button------ */
 .footer-b-container {
     display: flex;
+    width: 100%;
     flex-wrap: wrap;
+    padding: 15%;
+}
+
+.footer-button {
+    width: 20%;
+    margin: 10%;
 }
 
 .footer-b-img {
-    width: 3vw;
-    margin: 2vw;
+    width: 100%;
+}
+
+.footer-buttons p {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+/* --Desktop-- */
+@media screen and (min-width: 1024px) {
+    footer {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas:
+            'item2 item1 item3';
+    }
+
+    /* -----list----- */
+    .footer-list {
+        flex-direction: column;
+        align-items: center;
+        /*左右中央揃え*/
+        justify-content: center;
+        /*上下中央揃え*/
+    }
 }

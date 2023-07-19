@@ -173,7 +173,7 @@ const weatherCode = {
         if (weekdayCount === 6) date[i].style.color = "blue";
         var m = ("00" + (dt.getMonth() + 1)).slice(-2);
         var d = ("00" + dt.getDate()).slice(-2);
-        date[i].textContent = `${m}/${d}(${dayList[weekdayCount]})`;
+        date[i].textContent = `${d}/${m}(${dayList[weekdayCount]})`;
         var isNight = Number(i === 0 && !isTodaysData)
         weatherImg[i].src = "https://www.jma.go.jp/bosai/forecast/img/" + weatherCode[el][isNight];
         weatherTelop[i].textContent = weatherCode[el][2];
