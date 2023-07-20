@@ -124,12 +124,13 @@ const weatherCode = {
   
   const dayList = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
   
+  // new Array = 配列を作る
   const timeDefinesList = new Array();
   const weatherCodeList = new Array();
   const tempsMinList = new Array();
   const tempsMaxList = new Array();
   
-  fetch(url)
+  fetch(url) // リクエストの発行
     .then(function (response) {
       return response.json();
     })
