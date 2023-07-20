@@ -35,6 +35,7 @@ body {
     border: 0.2rem solid #d9d0bf;
     border-radius: 1.5rem;
     margin-bottom: 5rem;
+    overflow: auto; /*はみ出た場合のみスクロール*/
 }
 
 .weatherInfo {
@@ -99,6 +100,10 @@ body {
     background-color: #fff;
     padding: 2vw;
     border-radius: 1.5rem;
+}
+
+.wp-items div {
+    overflow: auto;
 }
 
 .wp-img {
