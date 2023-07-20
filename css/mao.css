@@ -62,6 +62,10 @@
     letter-spacing: 0;
 }
 
+.nav-side img {
+    display: none;
+}
+
 
 .header-sm {
     display: none;
@@ -83,6 +87,97 @@
     font-size: 50px;
     font-weight: 500;
     font-style: italic;
+}
+
+.carousel ,figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+footer {
+    display: grid;
+    background-color: #f2f2ea;
+    border-top: 1rem dotted #d9d0bf;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+        'item1 item1'
+        'item2 item3';
+}
+
+#footer-li {
+    grid-area: item1;
+}
+
+#footer-in {
+    grid-area: item2;
+}
+
+#footer-bu {
+    grid-area: item3;
+}
+
+
+/* -----logo----- */
+.footer-logo {
+    width: 20vw;
+}
+
+.footer-tel {
+    font-size: 2.5rem;
+    margin: 1rem;
+}
+
+.footer-email {
+    font-size: 2rem;
+    margin: 1rem;
+}
+
+/* -----list----- */
+.footer-list {
+    display: flex;
+    justify-content: center;
+    /*上下中央揃え*/
+}
+
+.footer-list li {
+    font-size: 3rem;
+    font-weight: bold;
+    list-style: none;
+    margin: 1.5rem;
+}
+
+.footer-list li a {
+    text-decoration: none;
+    color: black;
+}
+
+.footer-list li a:hover {
+    background-color: #d9d0bf;
+    border-radius: 2rem;
+}
+
+/* -----button------ */
+.footer-b-container {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    padding: 15%;
+}
+
+.footer-button {
+    width: 20%;
+    margin: 10%;
+}
+
+.footer-b-img {
+    width: 100%;
+}
+
+.footer-buttons p {
+    text-align: center;
+    margin-bottom: 3rem;
 }
 
 
@@ -140,9 +235,11 @@
         -ms-writing-mode: unset;
         writing-mode: unset;
         text-orientation: unset;
+        background-color: #FFF;
     }
     
     .nav-side img {
+        display: block;
         width: 35px;
     }
     
@@ -177,19 +274,22 @@
     }
 
     .carousel {
-        margin-top: 5rem;
+        margin-top: 2rem;
         margin-left: 11rem;
+        height: 100vh;
         padding: 20px;
         perspective: 500px;
         overflow: hidden;
         display: flex;
         flex-direction: column;
         align-items: center;
+
     }
 
-    .carousel p {
+    .carousel h2 {
         font-size: 30px;
-        margin-bottom: 2rem;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
     }
     
     .carousel > * {
@@ -198,7 +298,7 @@
 
     .carousel figure {
         margin: 0;
-        width: 500px;
+        width: 600px;
         transform-style: preserve-3d;
         transition: transform 0.5s;
         transform-origin: 50% 50% -482.8427124746px;
@@ -231,7 +331,7 @@
     }
 
     .carousel figure img:nth-child(5) {
-        transform: rotateY(5.02rad);
+        transform: rotateY(5.03rad);
     }
 
 
@@ -250,5 +350,20 @@
         border: 1px solid;
         letter-spacing: 1px;
         padding: 5px 10px;
+    }
+
+    footer {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas:
+            'item2 item1 item3';
+    }
+
+    /* -----list----- */
+    .footer-list {
+        flex-direction: column;
+        align-items: center;
+        /*左右中央揃え*/
+        justify-content: center;
+        /*上下中央揃え*/
     }
 }
