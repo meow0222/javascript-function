@@ -17,6 +17,7 @@
     width: 100vw;
     object-fit: cover;    
     z-index: -1;
+    position: relative;
 }
     
 @keyframes imgfade {
@@ -353,10 +354,12 @@ footer {
     }
 
     footer {
+        margin-left: 230px;
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-areas:
             'item2 item1 item3';
     }
+
 
     /* -----list----- */
     .footer-list {
@@ -365,5 +368,13 @@ footer {
         /*左右中央揃え*/
         justify-content: center;
         /*上下中央揃え*/
+    }
+
+    .footer-list li {
+        font-size: 20px;
+    }
+
+    .footer-info  p{
+        font-size: 20px;
     }
 }
