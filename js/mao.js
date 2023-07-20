@@ -22,10 +22,10 @@ var
   
 nav.addEventListener('click', onClick, true);
 
-function onClick(e) {
-  e.stopPropagation();
+function onClick(event) {
+  event.stopPropagation();
   
-  var t = e.target;
+  var t = event.target;
   if (t.tagName.toUpperCase() != 'BUTTON')
     return;
   
