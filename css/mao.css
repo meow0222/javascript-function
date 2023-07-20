@@ -181,6 +181,13 @@ footer {
     margin-bottom: 3rem;
 }
 
+.footer-list li {
+    font-size: 20px;
+}
+
+.footer-info  p{
+    font-size: 20px;
+}
 
 
 
